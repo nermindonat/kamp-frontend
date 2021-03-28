@@ -12,6 +12,7 @@ import { ProductResponseModel } from 'src/app/models/productResponseModel';
 export class ProductComponent implements OnInit {
 
   products:Product[] = [];
+  apiUrl="https://localhost:44363/api/products/getall"
   //productResponseModel:ProductResponseModel={};
   constructor(private httpClient:HttpClient) {}
 
@@ -20,6 +21,7 @@ export class ProductComponent implements OnInit {
   }
 
   getProducts(){
+    this.httpClient.get(this.apiUrl)
 
   }
 }
