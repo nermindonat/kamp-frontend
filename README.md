@@ -1,2 +1,2 @@
 # kamp-frontend
-Angular
+
