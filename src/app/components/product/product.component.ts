@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from 'src/app/models/product';
+import {HttpClient} from '@angular/common/http'
+import { ProductResponseModel } from 'src/app/models/productResponseModel';
 
+//HttpClient ile backend teki data ya ulaşıyoruz.
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -9,7 +12,14 @@ import {Product} from 'src/app/models/product';
 export class ProductComponent implements OnInit {
 
   products:Product[] = [];
-  constructor() {}
+  //productResponseModel:ProductResponseModel={};
+  constructor(private httpClient:HttpClient) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log("İnit çalıştı");
+  }
+
+  getProducts(){
+
+  }
 }
